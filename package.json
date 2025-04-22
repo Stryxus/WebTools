@@ -1,0 +1,26 @@
+{
+  "name": "webtools",
+  "version": "1.0.0",
+  "description": "All of my web tooling in one place.",
+  "homepage": "https://github.com/Stryxus/WebTools#readme",
+  "bugs": {
+    "url": "https://github.com/Stryxus/WebTools/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stryxus/WebTools.git"
+  },
+  "license": "ISC",
+  "author": "Stryxus",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "sharp": "^0.34.1",
+    "svgo": "^3.3.2",
+    "tsx": "^4.19.3",
+    "ttf2woff2": "^6.0.1"
+  }
+}
