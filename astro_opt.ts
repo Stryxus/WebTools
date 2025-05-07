@@ -20,7 +20,7 @@ const execAsync = promisify(exec);
 const watcher = chokidar.watch(watchDir, {
     ignored: (filePath: any) => {
         const ext = path.extname(filePath).toLowerCase();
-        return ext.length > 0 && (imageExtensions.includes(ext) || audioExtensions.includes(ext) || videoExtensions.includes(ext) || fontExtensions.includes(ext));
+        return ext.length > 0;
     },
     persistent: true,
 });
@@ -30,7 +30,7 @@ fs.readdir(watchDir, { recursive: true }).then((files: any) => {
     new Promise<void>((resolve) => {
         files.forEach(async (filePath: any, index: number, array: any) => {
             const ext = path.extname(filePath).toLowerCase();
-            if (ext.length > 0 && (imageExtensions.includes(ext) || audioExtensions.includes(ext) || videoExtensions.includes(ext) || fontExtensions.includes(ext))) {
+            if (ext.length > 0) {
                 await handleFileChange(path.join(path.resolve('./public_dev'), filePath));
                 if (index === array.length -1) resolve();
             }
